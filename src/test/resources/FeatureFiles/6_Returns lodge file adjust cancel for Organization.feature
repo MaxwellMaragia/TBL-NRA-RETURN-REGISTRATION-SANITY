@@ -1,6 +1,6 @@
 Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
 
-  @ind  @sanity @lodge @returns-ind
+  @org @sanity @lodge
   Scenario Outline: Verify the process of Lodge Paper Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -12,11 +12,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
     Then Verify success message "Returns Lodgement is Successful with Reference Number"
     Examples:
       | category     | taxtype            | year | number |
-#      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
-    
-  @ind  @sanity @file @returns @returns-ind
+      | Organisation | CIT Return (Final) | 2020 | 1      |
+
+  @org @sanity @file @returns
   Scenario Outline: Verify the process of Submit Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -28,11 +26,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
     Then Verify success message "Record successfully saved with reference number"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
-     
-  @ind  @sanity @adjust @returns @returns-ind
+      | Organisation | CIT Return (Final) | 2020 | 1      |
+
+  @org @sanity @adjust @returns
   Scenario Outline: Verify the process of Adjust Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -56,11 +52,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2020 | 1      |
 
-  @ind  @sanity @cancel @returns-ind
+  @org @sanity @cancel @returns
   Scenario Outline: Verify the process of Cancel Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -85,6 +79,4 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2020 | 1      |
