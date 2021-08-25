@@ -1163,7 +1163,7 @@ public class stepDefinitions extends BaseClass {
          String tin="";
          if(category.equals("Individual")){
              tin = sharedatastep.Individual_tin;
-             //tin = "1000061809";
+             tin = "1000064603";
          }else if(category.equals("Organisation")){
              tin = sharedatastep.Organization_tin;
              //tin = "1000058603";
@@ -1211,8 +1211,8 @@ public class stepDefinitions extends BaseClass {
     public void findTaxReturnForCategoryWithYearAndNumber(String category, String year, String number) {
         String tin="";
         if(category.equals("Individual")){
-            tin = sharedatastep.Individual_tin;
-            //tin = "1000061809";
+            //tin = sharedatastep.Individual_tin;
+            tin = "1000064603";
         }else if(category.equals("Organisation")){
             tin = sharedatastep.Organization_tin;
             //tin = "1000058603";
