@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="32" parent-id="1">
+<tr class="s-fail" test-id="77" parent-id="55">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then switch to frame1 <br/><span class="text-muted text-sm">To verify the process of Registering an individual successfully</span></td>
-	<td>0h 0m 32s+817msc</td>
+	<td class="_600">And Select taxtype Approval outcome dropdown value to Approve "First Name" <br/><span class="text-muted text-sm">To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</span></td>
+	<td>0h 4m 3s+598msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,24 +137,23 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: contentIFrame1 (tried for 30 second(s) with 500 milliseconds interval)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[text()='First Name'] (tried for 200 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at ✽.switch to frame1(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/1_Register%20Individual.feature:32)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#contentIFrame1"}
-  (Session info: chrome=92.0.4515.131)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at ✽.Select taxtype Approval outcome dropdown value to Approve "First Name"(file:///C:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:22)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='First Name']"}
+  (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ER2L871', ip: '192.168.1.181', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
+System info: host: 'DESKTOP-7DD6F0R', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Maxipain\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56314}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2c54f5fa71ae81440cebc0c6587118df
-*** Element info: {Using=id, value=contentIFrame1}
-	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\MAXWEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5159327f3c55a2be421b3f660cee955
+*** Element info: {Using=xpath, value=//label[text()='First Name']}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -162,17 +161,17 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
 	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:44)
@@ -215,169 +214,6 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 							</div>
 						</div>
 					</div>
-					<div class="list-item attr">
-						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.IllegalArgumentException</a>
-							<div class="item-except text-sm text-muted h-1x">
-								7 tests
-							</div>
-							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.IllegalArgumentException</h5>
-								<table class="table">
-									<thead><tr>
-										<th id="status-col"></th>
-										<th>Test</th>
-										<th>Duration</th>
-										<th>Attributes</th>
-										<th>Media</th>
-										<th>Source</th>
-									</tr></thead>
-									<tbody>
-	
-<tr class="s-fail" test-id="63" parent-id="55">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Search for Individual tin to register taxtype for <br/><span class="text-muted text-sm">To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</span></td>
-	<td>0h 0m 3s+296msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="89" parent-id="55">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Search for Individual tin to register taxtype for <br/><span class="text-muted text-sm">To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</span></td>
-	<td>0h 0m 2s+549msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="115" parent-id="55">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Search for Individual tin to register taxtype for <br/><span class="text-muted text-sm">To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</span></td>
-	<td>0h 0m 2s+177msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="144" parent-id="135">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1" <br/><span class="text-muted text-sm">Verify the process of Lodge Paper Return for <ReturnDocument></span></td>
-	<td>0h 0m 2s+252msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="157" parent-id="135">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number "" <br/><span class="text-muted text-sm">Verify the process of Lodge Paper Return for <ReturnDocument></span></td>
-	<td>0h 0m 1s+845msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="171" parent-id="135">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Find tax return for category "Individual" with year "2020" and number "1" <br/><span class="text-muted text-sm">Verify the process of Submit Tax Return for <ReturnDocument></span></td>
-	<td>0h 0m 3s+826msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:26)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="185" parent-id="135">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Find tax return for category "Individual" with year "" and number "" <br/><span class="text-muted text-sm">Verify the process of Adjust Tax Return for <ReturnDocument></span></td>
-	<td>0h 0m 3s+345msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:43)
-</textarea>
-	</td>
-</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
 			</div>
 		</div>
 	</div>
@@ -397,7 +233,7 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 12, 2021 09:47:18 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 25, 2021 12:07:44 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

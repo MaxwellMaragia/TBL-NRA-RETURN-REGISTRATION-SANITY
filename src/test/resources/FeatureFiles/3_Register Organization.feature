@@ -12,6 +12,7 @@ Feature: Submit Registration Application Organisation
     Then Enter actual turnover and source of capital
     Then Enter place of incorporation "India"
     Then Enter business sector details
+#    Then Select Assigned tax office for organization as "BOMTO"
     Then Select reason for organization tin application "Am a Supplier"
     Then Enter details for person making application with tin "1000007601"
     Then Fill in Local postal address details for Organization

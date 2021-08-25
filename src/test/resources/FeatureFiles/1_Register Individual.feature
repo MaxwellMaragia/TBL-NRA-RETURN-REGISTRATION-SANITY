@@ -1,6 +1,6 @@
 Feature: Submit Registration Application Individual
 
-  @ind @ind-reg-only
+  @ind @ind-reg-only @ind-reg-taxtypes
   Scenario: To verify the process of Registering an individual successfully
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -13,6 +13,8 @@ Feature: Submit Registration Application Individual
     Then Enter marital status "Single"
     Then Enter date of birth as "29091996" and place of birth "Pumwani"
     Then Select Nationality and Country of Residence as "Kenya"
+#    Then Select Assigned tax office as "Freetown West"
+#    Then Select Assigned tax office as "BOMTO"
     Then Select reason for Individual tin application "Am a Supplier"
     Then Fill in passport Identification details
     Then Fill in residence permit identification details

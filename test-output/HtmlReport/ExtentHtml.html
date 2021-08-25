@@ -54,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 12, 2021 09:47:18 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 25, 2021 12:07:44 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -85,13 +85,9 @@
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@ind</a></li>
 					<li><a href='#'>@ind-reg-only</a></li>
+					<li><a href='#'>@ind-reg-taxtypes</a></li>
 					<li><a href='#'>@ind-taxtypes-only</a></li>
 					<li><a href='#'>@sanity</a></li>
-					<li><a href='#'>@org</a></li>
-					<li><a href='#'>@lodge</a></li>
-					<li><a href='#'>@returns</a></li>
-					<li><a href='#'>@file</a></li>
-					<li><a href='#'>@adjust</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -132,10 +128,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -146,10 +142,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>8</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -162,12 +158,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='33.548%'><span class='strong'>52</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='94.203%'><span class='strong'>65</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='5.161%'>8</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='61.29%'>95</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='61.29%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1.449%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4.348%'>3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4.348%'>0</span> others
                 </div>
             </div>
         </div>
@@ -185,11 +181,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Submit Registration Application Individual</span>
-						<span class='test-time'>Aug 12, 2021 09:47:22 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Aug 25, 2021 12:07:48 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -198,14 +194,15 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@ind</span>
 		<span class='category label'>@ind-reg-only</span>
+		<span class='category label'>@ind-reg-taxtypes</span>
 	</div>
-	<span class='duration right label'>0h 3m 28s+14ms</span>
+	<span class='duration right label'>0h 7m 21s+731ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: To verify the process of Registering an individual successfully</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: To verify the process of Registering an individual successfully</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='5' class='node given pass' status='pass'>
@@ -316,26 +313,210 @@
 			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click on reference number</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='32' class='node then fail' status='fail'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then switch to frame1</div>
-			<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: contentIFrame1 (tried for 30 second(s) with 500 milliseconds interval)
+		<li test-id='32' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='33' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.clickNextStageButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click next stage button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='34' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='35' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.gotoViewAttachmentDetailsScreen()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Goto view AttachmentDetails screen</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='36' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.downloadTheAttachment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Download the Attachment</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='37' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='38' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.selectIdentificationOutcomeDropdownValueForIndividualTaxpayerApproval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Select Identification Outcome dropdown value for Individual Taxpayer Approval</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='39' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on NextStage button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='40' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='41' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.waitForDuplicateCheck(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then wait for duplicate check "First Name"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='42' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='43' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on NextStage button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='44' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='45' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.selectApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Select Approval outcome dropdown value to Approve "First Name"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='46' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_Save_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click on Save button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='47' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='48' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Verify approval "Approved"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='49' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.clicksOnTaxpayerNameCRM()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clicks on Taxpayer name CRM</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='50' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.refresh_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And refresh page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='51' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame0</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='52' class='node then pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.taxpayer_tin_is_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Taxpayer Tin is displayed</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>Register Tax Type Individual - Register Tax Type</span>
+						<span class='test-time'>Aug 25, 2021 12:15:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario outline node' test-id='56' status='fail'>
+	<div class='category-list'>
+		<span class='category label'>@ind</span>
+		<span class='category label'>@ind-taxtypes-only</span>
+		<span class='category label'>@sanity</span>
+		<span class='category label'>@ind-reg-taxtypes</span>
+	</div>
+	<span class='duration right label'>0h 6m 35s+373ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
+		<table class='runtime-table table-striped table'><tr><td>TaxType</td></tr><tr><td>Pay As You Earn</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='57' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
+			<ul class='gc steps'>
+				<li test-id='60' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='61' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='62' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.goToRegistrationRegisterTaxtype()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Go to Registration > Register Taxtype</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='63' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Search for Individual tin to register taxtype for</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='64' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeToRegister(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Select taxtype to register and fill required details "Pay As You Earn"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='65' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Verify success message "Record Added"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='66' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitTaxtypeRegistrationApplication()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Submit taxtype registration application</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='67' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Verify success message "Processing Completed - Reference Number"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='68' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.obtainReferenceNumberForIndRegistration(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Obtain reference number for ind registration "Processing Completed - Reference Number - ARN"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='69' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.openCRMAndCloseModal()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Open CRM and close modal</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='70' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_registration_application_link()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click on registration application link</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='71' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame0</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='72' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchIndividualRegistrationReferenceNumber()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then search individual registration reference number</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='73' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click on reference number</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='74' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='75' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on NextStage button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='76' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame1</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='77' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Select taxtype Approval outcome dropdown value to Approve "First Name"</h6>
+					<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[text()='First Name'] (tried for 200 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at ✽.switch to frame1(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/1_Register%20Individual.feature:32)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#contentIFrame1"}
-  (Session info: chrome=92.0.4515.131)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at ✽.Select taxtype Approval outcome dropdown value to Approve "First Name"(file:///C:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:22)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='First Name']"}
+  (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ER2L871', ip: '192.168.1.181', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
+System info: host: 'DESKTOP-7DD6F0R', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Maxipain\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56314}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2c54f5fa71ae81440cebc0c6587118df
-*** Element info: {Using=id, value=contentIFrame1}
-	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\MAXWEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5159327f3c55a2be421b3f660cee955
+*** Element info: {Using=xpath, value=//label[text()='First Name']}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -343,17 +524,17 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
 	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:44)
@@ -389,194 +570,6 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
 </textarea>
-		</li>
-		<li test-id='33' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.clickNextStageButton()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click next stage button</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='34' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='35' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.gotoViewAttachmentDetailsScreen()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Goto view AttachmentDetails screen</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='36' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.downloadTheAttachment()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Download the Attachment</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='37' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='38' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.selectIdentificationOutcomeDropdownValueForIndividualTaxpayerApproval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Select Identification Outcome dropdown value for Individual Taxpayer Approval</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='39' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on NextStage button</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='40' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='41' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.waitForDuplicateCheck(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then wait for duplicate check "First Name"</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='42' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='43' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on NextStage button</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='44' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='45' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.selectApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select Approval outcome dropdown value to Approve "First Name"</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='46' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_Save_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on Save button</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='47' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='48' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify approval "Approved"</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='49' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.clicksOnTaxpayerNameCRM()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Clicks on Taxpayer name CRM</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='50' class='node and skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.refresh_page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And refresh page</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='51' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame0</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='52' class='node then skip' status='skip'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.taxpayer_tin_is_displayed()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Taxpayer Tin is displayed</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='55'>
-					<div class='test-heading'>
-						<span class='test-name'>Register Tax Type Individual - Register Tax Type</span>
-						<span class='test-time'>Aug 12, 2021 09:50:58 AM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-<div class='scenario outline node' test-id='56' status='fail'>
-	<div class='category-list'>
-		<span class='category label'>@ind</span>
-		<span class='category label'>@ind-taxtypes-only</span>
-		<span class='category label'>@sanity</span>
-	</div>
-	<span class='duration right label'>0h 1m 19s+8ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
-		<table class='runtime-table table-striped table'><tr><td>taxtype</td></tr><tr><td>Pay As You Earn</td></tr><tr><td>Personal Income Tax</td></tr><tr><td>Goods and Services Tax</td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='57' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
-			<ul class='gc steps'>
-				<li test-id='60' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='61' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='62' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.goToRegistrationRegisterTaxtype()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Go to Registration > Register Taxtype</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='63' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Search for Individual tin to register taxtype for</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-				</li>
-				<li test-id='64' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeToRegister(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Select taxtype to register and fill required details "Pay As You Earn"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='65' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Record Added"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='66' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitTaxtypeRegistrationApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit taxtype registration application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='67' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Processing Completed - Reference Number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='68' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.obtainReferenceNumberForIndRegistration(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtain reference number for ind registration "Processing Completed - Reference Number - ARN"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='69' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.openCRMAndCloseModal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Open CRM and close modal</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='70' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_registration_application_link()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on registration application link</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='71' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame0</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='72' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchIndividualRegistrationReferenceNumber()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then search individual registration reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='73' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='74' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='75' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on NextStage button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='76' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='77' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select taxtype Approval outcome dropdown value to Approve "Tax Type"</h6>
-					<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='78' class='gc then skip' status='skip'>
 					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_Save_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on Save button</h6>
@@ -587,467 +580,6 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 					<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='80' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify approval "Approved"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='83' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
-			<ul class='gc steps'>
-				<li test-id='86' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='87' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='88' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.goToRegistrationRegisterTaxtype()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Go to Registration > Register Taxtype</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='89' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Search for Individual tin to register taxtype for</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-				</li>
-				<li test-id='90' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeToRegister(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Select taxtype to register and fill required details "Personal Income Tax"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='91' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Record Added"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='92' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitTaxtypeRegistrationApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit taxtype registration application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='93' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Processing Completed - Reference Number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='94' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.obtainReferenceNumberForIndRegistration(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtain reference number for ind registration "Processing Completed - Reference Number - ARN"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='95' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.openCRMAndCloseModal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Open CRM and close modal</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='96' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_registration_application_link()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on registration application link</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='97' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame0</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='98' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchIndividualRegistrationReferenceNumber()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then search individual registration reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='99' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='100' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='101' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on NextStage button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='102' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='103' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select taxtype Approval outcome dropdown value to Approve "Tax Type"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='104' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_Save_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on Save button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='105' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='106' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify approval "Approved"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='109' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</div>
-			<ul class='gc steps'>
-				<li test-id='112' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='113' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='114' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.goToRegistrationRegisterTaxtype()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Go to Registration > Register Taxtype</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='115' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Search for Individual tin to register taxtype for</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-				</li>
-				<li test-id='116' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeToRegister(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Select taxtype to register and fill required details "Goods and Services Tax"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='117' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Record Added"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='118' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitTaxtypeRegistrationApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit taxtype registration application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='119' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Processing Completed - Reference Number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='120' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.obtainReferenceNumberForIndRegistration(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtain reference number for ind registration "Processing Completed - Reference Number - ARN"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='121' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.openCRMAndCloseModal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Open CRM and close modal</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='122' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_registration_application_link()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on registration application link</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='123' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame0</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='124' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchIndividualRegistrationReferenceNumber()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then search individual registration reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='125' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='126' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='127' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_NextStage_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on NextStage button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='128' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='129' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Select taxtype Approval outcome dropdown value to Approve "Tax Type"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='130' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_Save_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on Save button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='131' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='132' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify approval "Approved"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='135'>
-					<div class='test-heading'>
-						<span class='test-name'>Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization</span>
-						<span class='test-time'>Aug 12, 2021 09:52:19 AM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-<div class='scenario outline node' test-id='136' status='fail'>
-	<div class='category-list'>
-		<span class='category label'>@ind</span>
-		<span class='category label'>@org</span>
-		<span class='category label'>@sanity</span>
-		<span class='category label'>@lodge</span>
-		<span class='category label'>@returns</span>
-	</div>
-	<span class='duration right label'>0h 0m 59s+842ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Verify the process of Lodge Paper Return for <ReturnDocument></div>
-		<table class='runtime-table table-striped table'><tr><td>category</td><td>taxtype</td><td>year</td><td>number</td></tr><tr><td>Individual</td><td>PAYE Returns</td><td>2020</td><td>1</td></tr><tr><td>Individual</td><td>Personal Income Tax</td><td></td><td></td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='137' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Verify the process of Lodge Paper Return for <ReturnDocument></div>
-			<ul class='gc steps'>
-				<li test-id='140' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='141' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='142' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnFilingAndProcessingLodgeReturn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on return filing and processing > Lodge return</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='143' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickReturnDocumentSearchButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click Return document search button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='144' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1"</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-				</li>
-				<li test-id='145' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enterLiability()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Enter liability</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='146' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitLodgeReturnApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit lodge return application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='147' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Returns Lodgement is Successful with Reference Number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='150' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Verify the process of Lodge Paper Return for <ReturnDocument></div>
-			<ul class='gc steps'>
-				<li test-id='153' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='154' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='155' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnFilingAndProcessingLodgeReturn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on return filing and processing > Lodge return</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='156' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickReturnDocumentSearchButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Click Return document search button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='157' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number ""</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-				</li>
-				<li test-id='158' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enterLiability()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Enter liability</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='159' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitLodgeReturnApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit lodge return application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='160' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Returns Lodgement is Successful with Reference Number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='163' status='fail'>
-	<div class='category-list'>
-		<span class='category label'>@ind</span>
-		<span class='category label'>@org</span>
-		<span class='category label'>@sanity</span>
-		<span class='category label'>@file</span>
-		<span class='category label'>@returns</span>
-	</div>
-	<span class='duration right label'>0h 0m 28s+152ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Verify the process of Submit Tax Return for <ReturnDocument></div>
-		<table class='runtime-table table-striped table'><tr><td>category</td><td>taxtype</td><td>year</td><td>number</td></tr><tr><td>Individual</td><td>PAYE Returns</td><td>2020</td><td>1</td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='164' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Verify the process of Submit Tax Return for <ReturnDocument></div>
-			<ul class='gc steps'>
-				<li test-id='167' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='168' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='169' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnFilingAndProcessingFileReturn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on return filing and processing > File return</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='170' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectReturnDocumentAs(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Select return document as "PAYE Returns"</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='171' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(java.lang.String,java.lang.String,java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Find tax return for category "Individual" with year "2020" and number "1"</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:26)
-</textarea>
-				</li>
-				<li test-id='172' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.fillInFileReturnDetailsForTaxtype(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Fill in file return details for taxtype "PAYE Returns"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='173' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitFileReturnApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit file return application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='174' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Record successfully saved with reference number"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='177' status='fail'>
-	<div class='category-list'>
-		<span class='category label'>@ind</span>
-		<span class='category label'>@org</span>
-		<span class='category label'>@sanity</span>
-		<span class='category label'>@adjust</span>
-		<span class='category label'>@returns</span>
-	</div>
-	<span class='duration right label'>0h 0m 23s+201ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Verify the process of Adjust Tax Return for <ReturnDocument></div>
-		<table class='runtime-table table-striped table'><tr><td>category</td><td>taxtype</td><td>year</td><td>number</td></tr><tr><td>Individual</td><td>PAYE Returns</td><td></td><td></td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='178' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Verify the process of Adjust Tax Return for <ReturnDocument></div>
-			<ul class='gc steps'>
-				<li test-id='181' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='182' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripsuser" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='183' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnFilingAndProcessingAdjustReturn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on return filing and processing > Adjust return</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='184' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selectReturnDocumentAs(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Select return document as "PAYE Returns"</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='185' class='gc then fail' status='fail'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(java.lang.String,java.lang.String,java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Find tax return for category "Individual" with year "" and number ""</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:43)
-</textarea>
-				</li>
-				<li test-id='186' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.performAmendmentForTaxtype(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Perform amendment for taxtype "PAYE Returns"</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='187' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.submitAdjustReturnApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Submit adjust return application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='188' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verify_success_message(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Verify success message "Tax return has been successfully saved.The status is now pending approval."</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='189' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.obtainReferenceNumberForAdjust(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtain reference number for adjust "Tax return has been successfully saved.The status is now pending approval."</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='190' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.openCRMAndCloseModal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Open CRM and close modal</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='191' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_case_management_dropdown()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on Case management dropdown</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='192' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnsTaxReturnApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click on Returns Tax return application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='193' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame0()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame0</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='194' class='gc when skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.entersAdjustReferenceNumberInSearchResults()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When enters adjust reference number in search results</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='195' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_reference_number()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on reference number</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='196' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='197' class='gc and skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.approveAdjustReturnsApplication()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Approve adjust returns application</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='198' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clickOnReturnsSaveButton()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Click on Returns Save button</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='199' class='gc then skip' status='skip'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame1()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then switch to frame1</h6>
-					<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='200' class='gc and skip' status='skip'>
 					<h6 class="step-name" title="StepDefinitions.stepDefinitions.verifyApproval(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Verify approval "Approved"</h6>
 					<div class="node-step">Step skipped</div>
 				</li>
@@ -1099,13 +631,14 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 					<div class='category-heading'>
 						<span class='category-name'>@ind</span>
 						<span class='category-status right'>
-						<span class='label fail'>12</span>
+						<span class='label pass'>1</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 12</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1119,63 +652,18 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2021 09:47:22 AM</td>
+										<td>Aug 25, 2021 12:07:48 PM</td>
 										<td class='linked' test-id='2'>To verify the process of Registering an individual successfully</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='56'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='57'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:18 AM</td>
-										<td class='linked' test-id='83'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:48 AM</td>
-										<td class='linked' test-id='109'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='136'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='137'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:50 AM</td>
-										<td class='linked' test-id='150'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='163'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='164'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='177'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='178'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -1187,13 +675,13 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 					<div class='category-heading'>
 						<span class='category-name'>@ind-reg-only</span>
 						<span class='category-status right'>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1207,8 +695,52 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2021 09:47:22 AM</td>
+										<td>Aug 25, 2021 12:07:48 PM</td>
 										<td class='linked' test-id='2'>To verify the process of Registering an individual successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ind-reg-taxtypes</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 25, 2021 12:07:48 PM</td>
+										<td class='linked' test-id='2'>To verify the process of Registering an individual successfully</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 25, 2021 12:15:15 PM</td>
+										<td class='linked' test-id='56'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Aug 25, 2021 12:15:15 PM</td>
+										<td class='linked' test-id='57'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -1220,13 +752,13 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 					<div class='category-heading'>
 						<span class='category-name'>@ind-taxtypes-only</span>
 						<span class='category-status right'>
-						<span class='label fail'>4</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1240,23 +772,13 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='56'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='57'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:18 AM</td>
-										<td class='linked' test-id='83'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:48 AM</td>
-										<td class='linked' test-id='109'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -1268,13 +790,13 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 					<div class='category-heading'>
 						<span class='category-name'>@sanity</span>
 						<span class='category-status right'>
-						<span class='label fail'>11</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 11</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1288,303 +810,13 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='56'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Aug 12, 2021 09:50:58 AM</td>
+										<td>Aug 25, 2021 12:15:15 PM</td>
 										<td class='linked' test-id='57'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:18 AM</td>
-										<td class='linked' test-id='83'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:48 AM</td>
-										<td class='linked' test-id='109'>To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='136'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='137'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:50 AM</td>
-										<td class='linked' test-id='150'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='163'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='164'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='177'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='178'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@org</span>
-						<span class='category-status right'>
-						<span class='label fail'>7</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 7</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='136'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='137'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:50 AM</td>
-										<td class='linked' test-id='150'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='163'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='164'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='177'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='178'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@lodge</span>
-						<span class='category-status right'>
-						<span class='label fail'>3</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='136'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='137'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:50 AM</td>
-										<td class='linked' test-id='150'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@returns</span>
-						<span class='category-status right'>
-						<span class='label fail'>7</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 7</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='136'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:19 AM</td>
-										<td class='linked' test-id='137'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:50 AM</td>
-										<td class='linked' test-id='150'>Verify the process of Lodge Paper Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='163'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='164'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='177'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='178'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@file</span>
-						<span class='category-status right'>
-						<span class='label fail'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='163'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:21 AM</td>
-										<td class='linked' test-id='164'>Verify the process of Submit Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@adjust</span>
-						<span class='category-status right'>
-						<span class='label fail'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='177'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:55 AM</td>
-										<td class='linked' test-id='178'>Verify the process of Adjust Tax Return for <ReturnDocument></td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -1636,27 +868,26 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2021 09:50:18 AM</td>
-										<td class='linked' test-id='32'>Then switch to frame1</td>
+										<td>Aug 25, 2021 12:17:47 PM</td>
+										<td class='linked' test-id='77'>And Select taxtype Approval outcome dropdown value to Approve "First Name"</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: contentIFrame1 (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[text()='First Name'] (tried for 200 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at ✽.switch to frame1(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/1_Register%20Individual.feature:32)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#contentIFrame1"}
-  (Session info: chrome=92.0.4515.131)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at ✽.Select taxtype Approval outcome dropdown value to Approve "First Name"(file:///C:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:22)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='First Name']"}
+  (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ER2L871', ip: '192.168.1.181', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
+System info: host: 'DESKTOP-7DD6F0R', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Maxipain\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56314}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2c54f5fa71ae81440cebc0c6587118df
-*** Element info: {Using=id, value=contentIFrame1}
-	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\MAXWEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5159327f3c55a2be421b3f660cee955
+*** Element info: {Using=xpath, value=//label[text()='First Name']}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1664,17 +895,17 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at StepDefinitions.stepDefinitions.switch_to_frame1(stepDefinitions.java:250)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at StepDefinitions.stepDefinitions.selectTaxtypeApprovalOutcomeDropdownValueToApprove(stepDefinitions.java:1136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
 	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:44)
@@ -1717,104 +948,6 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 						</div>
 					</div>
 				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.IllegalArgumentException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>7</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 12, 2021 09:51:12 AM</td>
-										<td class='linked' test-id='63'>Then Search for Individual tin to register taxtype for</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:51:44 AM</td>
-										<td class='linked' test-id='89'>Then Search for Individual tin to register taxtype for</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:14 AM</td>
-										<td class='linked' test-id='115'>Then Search for Individual tin to register taxtype for</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForIndividualTinToRegisterTaxtypeFor(stepDefinitions.java:1074)
-	at ✽.Search for Individual tin to register taxtype for(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/2_Register%20Individual%20Taxtypes.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:52:46 AM</td>
-										<td class='linked' test-id='144'>Then Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "PAYE Returns" for period year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:17 AM</td>
-										<td class='linked' test-id='157'>Then Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number ""</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.searchForTaxtypeWithCategoryAndTaxtype(stepDefinitions.java:1151)
-	at ✽.Search for taxtype with category "Individual" and taxtype "Personal Income Tax" for period year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:53:45 AM</td>
-										<td class='linked' test-id='171'>Then Find tax return for category "Individual" with year "2020" and number "1"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "2020" and number "1"(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:26)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2021 09:54:15 AM</td>
-										<td class='linked' test-id='185'>Then Find tax return for category "Individual" with year "" and number ""</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.findTaxReturnForCategoryWithYearAndNumber(stepDefinitions.java:1198)
-	at ✽.Find tax return for category "Individual" with year "" and number ""(file:///D:/work/TBL-NRA-RETURN-REGISTRATION-SANITY/src/test/resources/FeatureFiles/5_Returns%20lodge%20file%20adjust%20cancel%20for%20Individual.feature:43)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</div>
@@ -1832,37 +965,37 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>155</div>
+					<div class='panel-lead'>69</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 12, 2021 09:47:18 AM</div>
+					<div class='panel-lead'>Aug 25, 2021 12:07:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 12, 2021 09:54:24 AM</div>
+			 		<div class='panel-lead'>Aug 25, 2021 12:21:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 7m 6s+41ms</div>
+					<div class='panel-lead'>0h 14m 10s+254ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1879,69 +1012,33 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 						</tr>
 						<tr>
 							<td>@ind</td>
-							<td>0</td>
-							<td>12</td>
+							<td>1</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									0%
+									33.333%
 							</td>
 						</tr>
 						<tr>
 							<td>@ind-reg-only</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@ind-reg-taxtypes</td>
+							<td>1</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									33.333%
 							</td>
 						</tr>
 						<tr>
 							<td>@ind-taxtypes-only</td>
-							<td>0</td>
-							<td>4</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@sanity</td>
-							<td>0</td>
-							<td>11</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@org</td>
-							<td>0</td>
-							<td>7</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@lodge</td>
-							<td>0</td>
-							<td>3</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@returns</td>
-							<td>0</td>
-							<td>7</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@file</td>
 							<td>0</td>
 							<td>2</td>
 							<td>0</td>
@@ -1950,7 +1047,7 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 							</td>
 						</tr>
 						<tr>
-							<td>@adjust</td>
+							<td>@sanity</td>
 							<td>0</td>
 							<td>2</td>
 							<td>0</td>
@@ -1969,39 +1066,39 @@ Session ID: 2c54f5fa71ae81440cebc0c6587118df
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 3,
-				passParent: 0,
-				failParent: 3,
+                parentCount: 2,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 3,
-				childCount: 8,
-				passChild: 0,
-				failChild: 8,
+				exceptionsParent: 1,
+				childCount: 2,
+				passChild: 1,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 8,
-				grandChildCount: 155,
-				passGrandChild: 52,
-				failGrandChild: 8,
+				exceptionsChild: 1,
+				grandChildCount: 69,
+				passGrandChild: 65,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 95,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 103,
+				exceptionsGrandChild: 4,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Submit Registration Application Individual":208.014,"Register Tax Type Individual - Register Tax Type":79.008,"Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization":119.706
+			        "Submit Registration Application Individual":441.731,"Register Tax Type Individual - Register Tax Type":395.373
 			};
 		</script>
 	

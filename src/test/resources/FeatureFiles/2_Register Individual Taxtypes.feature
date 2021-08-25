@@ -1,6 +1,6 @@
 Feature: Register Tax Type Individual - Register Tax Type
 
-  @ind @ind-taxtypes-only @sanity
+  @ind @ind-taxtypes-only @sanity @ind-reg-taxtypes
   Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -19,7 +19,7 @@ Feature: Register Tax Type Individual - Register Tax Type
     Then switch to frame1
     And Click on NextStage button
     Then switch to frame1
-    And Select taxtype Approval outcome dropdown value to Approve "Tax Type"
+    And Select taxtype Approval outcome dropdown value to Approve "Effective Date of Registration"
     Then Click on Save button
     Then switch to frame1
     And Verify approval "Approved"
