@@ -12,7 +12,7 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
     Then Verify success message "Returns Lodgement is Successful with Reference Number"
     Examples:
       | category     | taxtype            | year | number |
-#      | Individual   | PAYE Returns       | 2020 | 1      |
+      | Individual   | PAYE Returns       | 2020 | 1      |
       | Individual   | PIT Return (Final) | 2020 | 1      |
       | Individual   | GST Return         | 2020 | 1      |
     

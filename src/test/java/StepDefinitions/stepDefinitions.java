@@ -127,7 +127,7 @@ public class stepDefinitions extends BaseClass {
     @Then("^Verify success message \"([^\"]*)\"$")
     public void verify_success_message(String Message) throws Throwable {
 
-        WebElement successMessage = threehundred.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
+        WebElement successMessage = twohundred.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
         if (successMessage.isDisplayed()) {
             System.out.println("Success message ('" + Message + "') has been displayed");
             Assert.assertTrue(true);
@@ -1084,8 +1084,9 @@ public class stepDefinitions extends BaseClass {
     }
 
     @Then("Go to Registration > Register Taxtype")
-    public void goToRegistrationRegisterTaxtype() {
+    public void goToRegistrationRegisterTaxtype() throws InterruptedException {
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[span='Registration']"))).click();
+        Thread.sleep(2000);
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[span='Register Tax Type']"))).click();
     }
 
@@ -1112,6 +1113,7 @@ public class stepDefinitions extends BaseClass {
         driver.findElement(By.xpath("//li[contains(text(),'"+taxtype+"')]")).click();
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("document.getElementById('RevenueTypeDetails:EffectiveDateOfRegistration_input').setAttribute('value', '16/09/2016')");
+        Thread.sleep(3500);
         driver.findElement(By.id("RevenueTypeDetails:EffectiveDateOfRegistration_input")).click();
         Thread.sleep(1500);
         driver.findElement(By.id("RevenueTypeDetails:EffectiveDateOfRegistration_input")).sendKeys("01012020");
@@ -1163,7 +1165,7 @@ public class stepDefinitions extends BaseClass {
          String tin="";
          if(category.equals("Individual")){
              tin = sharedatastep.Individual_tin;
-             tin = "1000064603";
+             //tin = "1000064603";
          }else if(category.equals("Organisation")){
              tin = sharedatastep.Organization_tin;
              //tin = "1000058603";
@@ -1211,8 +1213,8 @@ public class stepDefinitions extends BaseClass {
     public void findTaxReturnForCategoryWithYearAndNumber(String category, String year, String number) {
         String tin="";
         if(category.equals("Individual")){
-            //tin = sharedatastep.Individual_tin;
-            tin = "1000064603";
+            tin = sharedatastep.Individual_tin;
+            //tin = "1000064603";
         }else if(category.equals("Organisation")){
             tin = sharedatastep.Organization_tin;
             //tin = "1000058603";
@@ -1295,7 +1297,7 @@ public class stepDefinitions extends BaseClass {
 
             driver.findElement(By.xpath("//a[contains(text(),'INCOME STATEMENT')]")).click();
             Thread.sleep(2000);
-            driver.findElement(By.id("FlexibleFormEntity:pitShowTab:basicSalary_input")).sendKeys("0");
+            driver.findElement(By.id("FlexibleFormEntity:pitShowTab:basicSalary_input")).sendKeys("65000");
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:cashAllowance_input")).sendKeys("0");
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:otherCashBenefit_input")).sendKeys("0");
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:bonus_input")).sendKeys("0");

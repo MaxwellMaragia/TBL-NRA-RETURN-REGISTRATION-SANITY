@@ -1,7 +1,7 @@
 Feature: Register Tax Type Individual - Register Tax Type
 
   @ind @ind-taxtypes-only @sanity @ind-reg-taxtypes
-  Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<taxtype>"
+  Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<TaxType>"
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
     Then Go to Registration > Register Taxtype
