@@ -1,7 +1,7 @@
 Feature: Register Tax Type Individual - Register Tax Type
 
   @ind @ind-taxtypes-only @sanity @ind-reg-taxtypes
-  Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type "<TaxType>"
+  Scenario Outline: To Verify the Process of Registering Individual taxpayer Tax Type - <TaxType>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
     Then Go to Registration > Register Taxtype
@@ -26,5 +26,5 @@ Feature: Register Tax Type Individual - Register Tax Type
     Examples:
       | TaxType                |
       | Pay As You Earn        |
-      | Personal Income Tax    |
-      | Goods and Services Tax |
+#      | Personal Income Tax    |
+#      | Goods and Services Tax |

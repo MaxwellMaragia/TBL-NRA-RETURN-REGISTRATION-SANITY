@@ -1,7 +1,7 @@
 Feature: Register Tax Type Individual - Register Tax Type
 
-  @org @org-taxtypes-only @sanity
-  Scenario Outline: To Verify the Process of Registering Organization Tax Type "<TaxType>"
+  @org @org-taxtypes-only @sanity @org-taxtypes
+  Scenario Outline: To Verify the Process of Registering Organization Tax Type - <TaxType>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
     Then Go to Registration > Register Taxtype

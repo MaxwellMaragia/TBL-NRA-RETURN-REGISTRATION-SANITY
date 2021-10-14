@@ -8,10 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.security.Key;
 import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.time.temporal.ChronoUnit;
+
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
@@ -170,7 +167,8 @@ public class stepDefinitions extends BaseClass {
     public void enters_the_username_something_and_password_something_to_login(String username, String password) throws Throwable {
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginForm:username"))).sendKeys(username);
         driver.findElement(By.id("loginForm:password")).sendKeys(password);
-        driver.findElement(By.id("loginForm:j_idt18")).click();
+        driver.findElement(By.xpath("//button[span='Login']")).click();
+
     }
 
     @Then("^User logs out successfully$")
@@ -462,7 +460,8 @@ public class stepDefinitions extends BaseClass {
         Thread.sleep(1500);
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:FirstName"))).sendKeys(firstname);
         Thread.sleep(1000);
-        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:LastName"))).sendKeys(getRandom(5));
+        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:LastName"))).sendKeys(getRandom(6));
+//        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:LastName"))).sendKeys("aro");
     }
 
     @Then("Select Gender for Individual")
@@ -500,7 +499,7 @@ public class stepDefinitions extends BaseClass {
         driver.findElement(By.xpath("//li[contains(text(),'" + country + "')]")).click();
         Thread.sleep(1000);
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"RegisterIndividual:individualAccordion:CountryOfResidence\"]/div[3]"))).click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//li[contains(text(),'" + country + "')]")).click();
     }
 
@@ -549,7 +548,7 @@ public class stepDefinitions extends BaseClass {
         driver.findElement(By.id("Identification:IdentificationEffectiveDate_input")).click();
         driver.findElement(By.id("Identification:IdentificationEffectiveDate_input")).sendKeys("30/07/2020");
         actions.sendKeys(Keys.TAB).perform();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         driver.findElement(By.id("Identification:ExpiryDate_input")).click();
         Thread.sleep(1000);
         driver.findElement(By.id("Identification:ExpiryDate_input")).sendKeys(Keys.ENTER);
@@ -587,8 +586,9 @@ public class stepDefinitions extends BaseClass {
 
 
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"Identification:CountryOfIssue\"]/div[3]"))).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//li[contains(text(),'Kenya')]")).click();
+        Thread.sleep(4000);
+        ten.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Kenya')]"))).click();
+//        driver.findElement(By.xpath("//li[contains(text(),'Kenya')]")).click();
 
         driver.findElement(By.id("Identification:Ok")).click();
         //end of passport details
@@ -605,8 +605,7 @@ public class stepDefinitions extends BaseClass {
 
         //add business sector
         ten.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:individualAccordion:businessDetailsHandler:AddBusinessSD"))).click();
-        WebElement frame = twenty.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("iframe")));
-        driver.switchTo().frame(frame);
+        switchToBackofficeFrame();
 
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"BusinessSectorDetails:BusinessCode\"]/div[3]"))).click();
         Thread.sleep(1000);
@@ -615,6 +614,7 @@ public class stepDefinitions extends BaseClass {
         //set as primary indicator
         driver.findElement(By.xpath("//*[@id=\"BusinessSectorDetails:PrimaryIndicator\"]/div[2]/span")).click();
         driver.findElement(By.id("BusinessSectorDetails:OK")).click();
+        switchToDefault();
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Software publishing')]"))).isDisplayed();
     }
 
@@ -644,6 +644,7 @@ public class stepDefinitions extends BaseClass {
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Kenema')]"))).click();
 
         driver.findElement(By.id("AddressDetails:addOk")).click();
+        switchToDefault();
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Local Postal Address')]"))).isDisplayed();
     }
 
@@ -661,6 +662,7 @@ public class stepDefinitions extends BaseClass {
 
         driver.findElement(By.id("ContactDetails:ContactMethodDetailForWeb")).sendKeys(email);
         driver.findElement(By.id("ContactDetails:Ok")).click();
+        switchToDefault();
         fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Personal')]"))).isDisplayed();
     }
 
@@ -709,6 +711,7 @@ public class stepDefinitions extends BaseClass {
 
     @Then("^Click on registration application link$")
     public void click_on_registration_application_link() throws Throwable {
+        Thread.sleep(2000);
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Pro.getProperty("Cases_Management_Dropdown_XPATH")))).click();
         Thread.sleep(2000);
         driver.findElement(By.id("tbg_registrationapplication")).click();
@@ -825,11 +828,12 @@ public class stepDefinitions extends BaseClass {
 
     @Then("^Taxpayer Tin is displayed$")
     public void taxpayer_tin_is_displayed() throws Throwable {
-        Thread.sleep(6000);
+
 
         WebDriverWait wait = new WebDriverWait(driver, 40);
         WebElement tinLabel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"TIN Number_label\"]")));
         System.out.println("---------------------------------------------------------");
+        Thread.sleep(2000);
         sharedatastep.Individual_tin=tinLabel.getText();
         if(sharedatastep.Individual_tin == null || sharedatastep.Individual_tin.equals("--")){
             refresh_page();
@@ -921,7 +925,7 @@ public class stepDefinitions extends BaseClass {
     public void enterDetailsForPersonMakingApplicationWithTin(String arg0) throws InterruptedException {
         driver.findElement(By.id("OrganisationSummaryDetails:organisationAccordion:find")).click();
         switchToFrameBackoffice();
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys("1000007601");
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys("1000007601");
         driver.findElement(By.id("SearchForm:j_idt21")).click();
         Thread.sleep(2000);
         switchToDefault();
@@ -985,7 +989,7 @@ public class stepDefinitions extends BaseClass {
         switchToDefault();
         Thread.sleep(3000);
         driver.switchTo().frame(1);
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys(tin);
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys(tin);
         driver.findElement(By.id("SearchForm:j_idt21")).click();
         switchToDefault();
         switchToFrameBackoffice();
@@ -1092,15 +1096,15 @@ public class stepDefinitions extends BaseClass {
 
     @Then("Search for Individual tin to register taxtype for")
     public void searchForIndividualTinToRegisterTaxtypeFor() {
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys(sharedatastep.Individual_tin);
-        //twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys("1000058018");
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys(sharedatastep.Individual_tin);
+        //twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys("1000058018");
         driver.findElement(By.id("SearchForm:j_idt40")).click();
     }
 
     @Then("Search for Organization tin to register taxtype for")
     public void searchForOrganizationTinToRegisterTaxtypeFor() {
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys(sharedatastep.Organization_tin);
-        //twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:accountNumber"))).sendKeys("1000058018");
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys(sharedatastep.Organization_tin);
+        //twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys("1000058018");
         driver.findElement(By.id("SearchForm:j_idt40")).click();
     }
 
@@ -1165,7 +1169,7 @@ public class stepDefinitions extends BaseClass {
          String tin="";
          if(category.equals("Individual")){
              tin = sharedatastep.Individual_tin;
-             //tin = "1000064603";
+            // tin = "1000066002";
          }else if(category.equals("Organisation")){
              tin = sharedatastep.Organization_tin;
              //tin = "1000058603";
@@ -1214,7 +1218,7 @@ public class stepDefinitions extends BaseClass {
         String tin="";
         if(category.equals("Individual")){
             tin = sharedatastep.Individual_tin;
-            //tin = "1000064603";
+            //tin = "1000066002";
         }else if(category.equals("Organisation")){
             tin = sharedatastep.Organization_tin;
             //tin = "1000058603";
@@ -1253,20 +1257,20 @@ public class stepDefinitions extends BaseClass {
             // release Contol+V for pasting
             rb.keyRelease(KeyEvent.VK_CONTROL);
             rb.keyRelease(KeyEvent.VK_V);
-
+            Thread.sleep(3000);
             // for pressing and releasing Enter
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
             driver.findElement(By.xpath("//*[@id=\"FlexbleCSVFileUpload:fileCSVFiletoUpload\"]/div[1]/button[1]")).click();
             fifteen.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexbleCSVFileUpload:id_filename"))).isDisplayed();
-            Thread.sleep(2000);
+            Thread.sleep(4000);
             driver.findElement(By.id("FlexbleCSVFileUpload:btnNext")).click();
             driver.switchTo().defaultContent();
             Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
-            driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
+            //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
 //            jse.executeScript("document.getElementById('FlexibleFormEntity:declarationDate_input').setAttribute('value', '01/01/2018')");
         }
@@ -1378,11 +1382,18 @@ public class stepDefinitions extends BaseClass {
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:pitShowTab:declarantName"))).sendKeys("DR Margie Wambui");
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarantPosition")).sendKeys("Doctor");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
-//            jse.executeScript("FlexibleFormEntity:pitShowTab:declarationDate_input').setAttribute('value', '01/01/2018')");
+            //jse.executeScript("FlexibleFormEntity:pitShowTab:declarationDate_input').setAttribute('value', '01/01/2018')");
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarationDate_input")).sendKeys("01/01/2018");
         }
 
         if (taxtype.equals("GST Return")) {
+
+            thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:standardSalesExclusive_input"))).sendKeys("20000");
+            driver.findElement(By.id("FlexibleFormEntity:zeroRatedSupplies_input")).sendKeys("20000000");
+            driver.findElement(By.id("FlexibleFormEntity:exemptSupplies_input")).sendKeys("0");
+            driver.findElement(By.id("FlexibleFormEntity:relievedSuppliesExclusive_input")).sendKeys("0");
+            driver.findElement(By.id("FlexibleFormEntity:InputTaxDeductible_input")).sendKeys("0");
+            Thread.sleep(2000);
 
             thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:attachmentTable:j_id1"))).click();
 
@@ -1396,9 +1407,10 @@ public class stepDefinitions extends BaseClass {
             driver.findElement(By.id("FlexbleFormAttachment:id_attachment_input")).sendKeys(path);
             driver.findElement(By.id("FlexbleFormAttachment:Ok")).click();
             switchToDefault();
+            Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
-            driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
+            //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
         }
 
         if (taxtype.equals("CIT Return (Final)")) {
@@ -1493,7 +1505,7 @@ public class stepDefinitions extends BaseClass {
 
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:CITDetailsTab:declarantName"))).sendKeys("DR Margie Wambui");
             driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarantPosition")).sendKeys("Doctor");
-            driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarationDate_input")).sendKeys("01/01/2018");
+            //driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarationDate_input")).sendKeys("01/01/2018");
         }
 
     }
