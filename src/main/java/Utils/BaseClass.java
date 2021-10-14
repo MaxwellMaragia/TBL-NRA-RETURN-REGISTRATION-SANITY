@@ -46,14 +46,12 @@ public class BaseClass {
 	
 	public static String todaysDate() {
 		LocalDate today = LocalDate.now();
-    	String formattedDate = today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
-    	return formattedDate;
+		return today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
 	}
 	public static String tomorrowsDate() {
 		LocalDate today = LocalDate.now();
 		LocalDate tomorrow = today.plus(1, ChronoUnit.DAYS);
-    	String formattedDate = tomorrow.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    	return formattedDate;
+		return tomorrow.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 	}
 
 	public static String getRandom(int n)
