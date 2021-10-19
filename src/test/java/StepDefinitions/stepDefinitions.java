@@ -694,7 +694,7 @@ public class stepDefinitions extends BaseClass {
 
     @Then("Submit Individual registration application")
     public void submitIndividualRegistrationApplication() {
-        driver.findElement(By.id("RegisterIndividual:submitTaxpayerRegistration")).click();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:submitTaxpayerRegistration"))).click();
     }
 
 

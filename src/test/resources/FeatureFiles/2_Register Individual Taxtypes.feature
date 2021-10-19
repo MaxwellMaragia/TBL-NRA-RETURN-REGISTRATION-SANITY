@@ -26,5 +26,5 @@ Feature: Register Tax Type Individual - Register Tax Type
     Examples:
       | TaxType                |
       | Pay As You Earn        |
-#      | Personal Income Tax    |
-#      | Goods and Services Tax |
+      | Personal Income Tax    |
+      | Goods and Services Tax |
