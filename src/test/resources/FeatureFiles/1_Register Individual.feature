@@ -2,7 +2,6 @@ Feature: Submit Registration Application Individual
 
   @ind @ind-reg-only @ind-reg-taxtypes
   Scenario: To verify the process of Registering an individual successfully
-    Then Open CRM and close modal
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
     Then Go to Registration > Register Taxpayer > Register Individual Demo

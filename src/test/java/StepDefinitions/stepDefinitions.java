@@ -317,8 +317,8 @@ public class stepDefinitions extends BaseClass {
     @Then("Open CRM and close modal")
     public void openCRMAndCloseModal() {
         driver.get(Pro.getProperty("NRA_crm_url_Registration"));
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        WebElement specificframe = (driver.findElement(By.id(Pro.getProperty("CRM_ExploreCrmWindow_Frame__ID"))));
+
+        WebElement specificframe = thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("InlineDialog_Iframe")));
         driver.switchTo().frame(specificframe);
         WebDriverWait CloseWindow = new WebDriverWait(driver, 60);
         CloseWindow.until(ExpectedConditions.elementToBeClickable(By.id(Pro.getProperty("CRM_ExploreCrmWindow_Frame_Close_ID")))).click();
