@@ -318,7 +318,7 @@ public class stepDefinitions extends BaseClass {
     public void openCRMAndCloseModal() {
         driver.get(Pro.getProperty("NRA_crm_url_Registration"));
 
-        WebElement specificframe = thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("InlineDialog_Iframe")));
+        WebElement specificframe = twohundred.until(ExpectedConditions.visibilityOfElementLocated(By.id("InlineDialog_Iframe")));
         driver.switchTo().frame(specificframe);
         WebDriverWait CloseWindow = new WebDriverWait(driver, 60);
         CloseWindow.until(ExpectedConditions.elementToBeClickable(By.id(Pro.getProperty("CRM_ExploreCrmWindow_Frame_Close_ID")))).click();
@@ -663,7 +663,9 @@ public class stepDefinitions extends BaseClass {
         driver.findElement(By.id("ContactDetails:ContactMethodDetailForWeb")).sendKeys(email);
         driver.findElement(By.id("ContactDetails:Ok")).click();
         switchToDefault();
+
         onehundred.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Personal')]"))).isDisplayed();
+        //Thread.sleep(5000);
     }
 
     @Then("Upload attachment {string} for Individual with file {string}")
@@ -712,7 +714,7 @@ public class stepDefinitions extends BaseClass {
     @Then("^Click on registration application link$")
     public void click_on_registration_application_link() throws Throwable {
         Thread.sleep(2000);
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Pro.getProperty("Cases_Management_Dropdown_XPATH")))).click();
+        fiftyfive.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Pro.getProperty("Cases_Management_Dropdown_XPATH")))).click();
         Thread.sleep(2000);
         driver.findElement(By.id("tbg_registrationapplication")).click();
     }
