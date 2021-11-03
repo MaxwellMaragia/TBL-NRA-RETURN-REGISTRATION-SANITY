@@ -27,4 +27,4 @@ Feature: Register Tax Type Individual - Register Tax Type
       | TaxType                |
       | Pay As You Earn        |
       | Personal Income Tax    |
-      | Goods and Services Tax |
+#      | Goods and Services Tax |

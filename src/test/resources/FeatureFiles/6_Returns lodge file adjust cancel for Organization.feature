@@ -1,4 +1,4 @@
-Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
+Feature: Lodge-File-Adjust-Cancel Tax Returns for Organization
 
   @org @sanity @lodge
   Scenario Outline: Verify the process of Lodge Paper Return for <taxtype>

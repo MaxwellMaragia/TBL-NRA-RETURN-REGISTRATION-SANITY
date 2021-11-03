@@ -1,4 +1,4 @@
-Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
+Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual
 
   @ind  @sanity @lodge @returns-ind
   Scenario Outline: Verify the process of Lodge Paper Return for <taxtype>
@@ -14,7 +14,7 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
       | category     | taxtype            | year | number |
       | Individual   | PAYE Returns       | 2020 | 1      |
       | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+#      | Individual   | GST Return         | 2020 | 1      |
     
   @ind  @sanity @file @returns @returns-ind
   Scenario Outline: Verify the process of Submit Tax Return for <taxtype>
@@ -30,7 +30,7 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
       | category     | taxtype            | year | number |
       | Individual   | PAYE Returns       | 2020 | 1      |
       | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+#      | Individual   | GST Return         | 2020 | 1      |
      
   @ind  @sanity @adjust @returns @returns-ind
   Scenario Outline: Verify the process of Adjust Tax Return for <taxtype>
@@ -58,7 +58,7 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
       | category     | taxtype            | year | number |
       | Individual   | PAYE Returns       | 2020 | 1      |
       | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+#      | Individual   | GST Return         | 2020 | 1      |
 
   @ind  @sanity @cancel @returns-ind
   Scenario Outline: Verify the process of Cancel Tax Return for <taxtype>
@@ -87,4 +87,4 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual and Organization
       | category     | taxtype            | year | number |
       | Individual   | PAYE Returns       | 2020 | 1      |
       | Individual   | PIT Return (Final) | 2020 | 1      |
-      | Individual   | GST Return         | 2020 | 1      |
+#      | Individual   | GST Return         | 2020 | 1      |
