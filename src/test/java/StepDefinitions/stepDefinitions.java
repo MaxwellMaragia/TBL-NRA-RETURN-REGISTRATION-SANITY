@@ -125,7 +125,7 @@ public class stepDefinitions extends BaseClass {
     @Then("^Verify success message \"([^\"]*)\"$")
     public void verify_success_message(String Message) throws Throwable {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(15));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(60));
         WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
         if (successMessage.isDisplayed()) {
             System.out.println("Success message ('" + Message + "') has been displayed");
