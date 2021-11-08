@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.security.Key;
 import java.sql.Timestamp;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
@@ -86,28 +87,28 @@ public class stepDefinitions extends BaseClass {
         Pro.load(fls);
         driver = BaseClass.getDriver();
         actions = new Actions(driver);
-        five = new WebDriverWait(driver, 5);
-        ten = new WebDriverWait(driver, 10);
-        fifteen = new WebDriverWait(driver, 15);
-        twenty = new WebDriverWait(driver, 20);
-        twentyfive = new WebDriverWait(driver, 25);
-        thirty = new WebDriverWait(driver, 30);
-        thirtyfive = new WebDriverWait(driver, 35);
-        fourty = new WebDriverWait(driver, 40);
-        fourtyfive = new WebDriverWait(driver, 45);
-        fifty = new WebDriverWait(driver, 50);
-        fiftyfive = new WebDriverWait(driver, 55);
-        sixty = new WebDriverWait(driver, 60);
-        sixtyfive = new WebDriverWait(driver, 65);
-        seventy = new WebDriverWait(driver, 70);
-        seventyfive = new WebDriverWait(driver, 75);
-        eighty = new WebDriverWait(driver, 80);
-        eightyfive = new WebDriverWait(driver, 85);
-        ninety = new WebDriverWait(driver, 90);
-        ninetyfive = new WebDriverWait(driver, 95);
-        onehundred = new WebDriverWait(driver, 100);
-        twohundred = new WebDriverWait(driver, 200);
-        threehundred = new WebDriverWait(driver, 300);
+        five = new WebDriverWait(driver, Duration.ofSeconds(5));
+        ten = new WebDriverWait(driver, Duration.ofSeconds(10));
+        fifteen = new WebDriverWait(driver, Duration.ofSeconds(15));
+        twenty = new WebDriverWait(driver, Duration.ofSeconds(20));
+        twentyfive = new WebDriverWait(driver, Duration.ofSeconds(25));
+        thirty = new WebDriverWait(driver, Duration.ofSeconds(30));
+        thirtyfive = new WebDriverWait(driver, Duration.ofSeconds(35));
+        fourty = new WebDriverWait(driver, Duration.ofSeconds(40));
+        fourtyfive = new WebDriverWait(driver, Duration.ofSeconds(45));
+        fifty = new WebDriverWait(driver, Duration.ofSeconds(50));
+        fiftyfive = new WebDriverWait(driver, Duration.ofSeconds(55));
+        sixty = new WebDriverWait(driver, Duration.ofSeconds(60));
+        sixtyfive = new WebDriverWait(driver, Duration.ofSeconds(65));
+        seventy = new WebDriverWait(driver, Duration.ofSeconds(70));
+        seventyfive = new WebDriverWait(driver, Duration.ofSeconds(75));
+        eighty = new WebDriverWait(driver, Duration.ofSeconds(80));
+        eightyfive = new WebDriverWait(driver, Duration.ofSeconds(85));
+        ninety = new WebDriverWait(driver, Duration.ofSeconds(90));
+        ninetyfive = new WebDriverWait(driver, Duration.ofSeconds(95));
+        onehundred = new WebDriverWait(driver, Duration.ofSeconds(100));
+        twohundred = new WebDriverWait(driver, Duration.ofSeconds(200));
+        threehundred = new WebDriverWait(driver, Duration.ofSeconds(300));
 
     }
 
@@ -124,7 +125,8 @@ public class stepDefinitions extends BaseClass {
     @Then("^Verify success message \"([^\"]*)\"$")
     public void verify_success_message(String Message) throws Throwable {
 
-        WebElement successMessage = twohundred.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(60));
+        WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
         if (successMessage.isDisplayed()) {
             System.out.println("Success message ('" + Message + "') has been displayed");
             Assert.assertTrue(true);
@@ -196,7 +198,12 @@ public class stepDefinitions extends BaseClass {
 
     @And("^Click on Case management dropdown$")
     public void click_on_case_management_dropdown() throws Throwable {
+        switch_to_frame0();
+        thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Active Cases in Progress Overview')]"))).isDisplayed();
+        switchToDefault();
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"TabCS\"]/a/span")).click();
+        Thread.sleep(1000);
     }
 
     @Then("^switch to frame0$")
@@ -297,9 +304,9 @@ public class stepDefinitions extends BaseClass {
 
     @Then("^Click on NextStage button$")
     public void click_on_NextStage_button() throws Throwable {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Thread.sleep(3000);
         driver.findElement(By.xpath(Pro.getProperty("Individual_NextStage_Button_XPATH"))).click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
 
@@ -317,8 +324,8 @@ public class stepDefinitions extends BaseClass {
     @Then("Open CRM and close modal")
     public void openCRMAndCloseModal() {
         driver.get(Pro.getProperty("NRA_crm_url_Registration"));
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        WebElement specificframe = (driver.findElement(By.id(Pro.getProperty("CRM_ExploreCrmWindow_Frame__ID"))));
+
+        WebElement specificframe = twohundred.until(ExpectedConditions.visibilityOfElementLocated(By.id("InlineDialog_Iframe")));
         driver.switchTo().frame(specificframe);
         WebDriverWait CloseWindow = new WebDriverWait(driver, 60);
         CloseWindow.until(ExpectedConditions.elementToBeClickable(By.id(Pro.getProperty("CRM_ExploreCrmWindow_Frame_Close_ID")))).click();
@@ -663,7 +670,9 @@ public class stepDefinitions extends BaseClass {
         driver.findElement(By.id("ContactDetails:ContactMethodDetailForWeb")).sendKeys(email);
         driver.findElement(By.id("ContactDetails:Ok")).click();
         switchToDefault();
+
         onehundred.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Personal')]"))).isDisplayed();
+        //Thread.sleep(5000);
     }
 
     @Then("Upload attachment {string} for Individual with file {string}")
@@ -711,9 +720,12 @@ public class stepDefinitions extends BaseClass {
 
     @Then("^Click on registration application link$")
     public void click_on_registration_application_link() throws Throwable {
-        Thread.sleep(2000);
-        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Pro.getProperty("Cases_Management_Dropdown_XPATH")))).click();
-        Thread.sleep(2000);
+        switch_to_frame0();
+        thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Active Cases in Progress Overview')]"))).isDisplayed();
+        switchToDefault();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"TabCS\"]/a/span")).click();
+        Thread.sleep(1000);
         driver.findElement(By.id("tbg_registrationapplication")).click();
     }
 
@@ -868,9 +880,11 @@ public class stepDefinitions extends BaseClass {
     }
 
     @Then("Enter rgd number")
-    public void enterRgdNumber() {
+    public void enterRgdNumber() throws InterruptedException {
+        Thread.sleep(2000);
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("OrganisationSummaryDetails:organisationAccordion:rgdNo"))).sendKeys(String.valueOf(timestamp.getTime()));
+        Thread.sleep(1000);
     }
 
     @Then("Select account year end date and end month")
@@ -909,6 +923,7 @@ public class stepDefinitions extends BaseClass {
         //set as primary indicator
         driver.findElement(By.xpath("//*[@id=\"BusinessSectorDetails:PrimaryIndicator\"]/div[2]/span")).click();
         driver.findElement(By.id("BusinessSectorDetails:OK")).click();
+        switchToDefault();
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Software publishing')]"))).isDisplayed();
     }
 
@@ -960,7 +975,8 @@ public class stepDefinitions extends BaseClass {
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Kenema')]"))).click();
 
         driver.findElement(By.id("AddressDetails:addOk")).click();
-        ten.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Local Postal Address')]"))).isDisplayed();
+        switchToDefault();
+        fiftyfive.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Local Postal Address')]"))).isDisplayed();
     }
 
     @Then("Enter email primary contact for organization as {string}")
@@ -977,7 +993,8 @@ public class stepDefinitions extends BaseClass {
 
         driver.findElement(By.id("ContactDetails:ContactMethodDetailForWeb")).sendKeys(email);
         driver.findElement(By.id("ContactDetails:Ok")).click();
-        thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Personal')]"))).isDisplayed();
+        switchToDefault();
+        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'Personal')]"))).isDisplayed();
     }
 
     @Then("Enter primary director with tin {string}")
@@ -1145,7 +1162,7 @@ public class stepDefinitions extends BaseClass {
         driver.switchTo().defaultContent();
         switch_to_frame1();
         WebElement Outcome = driver.findElement(By.id("header_process_tbg_approvaloutcome4"));
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         actions.doubleClick(Outcome).build().perform();
         Outcome.click();
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
@@ -1383,7 +1400,7 @@ public class stepDefinitions extends BaseClass {
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarantPosition")).sendKeys("Doctor");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
             //jse.executeScript("FlexibleFormEntity:pitShowTab:declarationDate_input').setAttribute('value', '01/01/2018')");
-            driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarationDate_input")).sendKeys("01/01/2018");
+            //driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarationDate_input")).sendKeys("01/01/2018");
         }
 
         if (taxtype.equals("GST Return")) {

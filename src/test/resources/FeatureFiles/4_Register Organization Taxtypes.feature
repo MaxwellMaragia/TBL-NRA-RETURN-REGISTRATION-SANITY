@@ -1,4 +1,4 @@
-Feature: Register Tax Type Individual - Register Tax Type
+Feature: Register Tax Type Organization - Register Tax Type
 
   @org @org-taxtypes-only @sanity @org-taxtypes
   Scenario Outline: To Verify the Process of Registering Organization Tax Type - <TaxType>
@@ -19,9 +19,9 @@ Feature: Register Tax Type Individual - Register Tax Type
     Then switch to frame1
     And Click on NextStage button
     Then switch to frame1
-    Then Goto view AttachmentDetails screen
-    And Download the Attachment
-    Then switch to frame1
+#    Then Goto view AttachmentDetails screen
+#    And Download the Attachment
+#    Then switch to frame1
     And Select taxtype Approval outcome dropdown value to Approve "Effective Date of Registration"
     Then Click on Save button
     Then switch to frame1
