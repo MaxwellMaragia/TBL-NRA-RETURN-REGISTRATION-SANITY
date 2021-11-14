@@ -125,7 +125,7 @@ public class stepDefinitions extends BaseClass {
     @Then("^Verify success message \"([^\"]*)\"$")
     public void verify_success_message(String Message) throws Throwable {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(15));
         WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + Message + "')]")));
         if (successMessage.isDisplayed()) {
             System.out.println("Success message ('" + Message + "') has been displayed");
@@ -1106,6 +1106,7 @@ public class stepDefinitions extends BaseClass {
 
     @Then("Go to Registration > Register Taxtype")
     public void goToRegistrationRegisterTaxtype() throws InterruptedException {
+        Thread.sleep(2000);
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[span='Registration']"))).click();
         Thread.sleep(2000);
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[span='Register Tax Type']"))).click();
@@ -1114,7 +1115,7 @@ public class stepDefinitions extends BaseClass {
     @Then("Search for Individual tin to register taxtype for")
     public void searchForIndividualTinToRegisterTaxtypeFor() {
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys(sharedatastep.Individual_tin);
-        //twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys("1000058018");
+       // twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys("1000069834");
         driver.findElement(By.id("SearchForm:j_idt40")).click();
     }
 
@@ -1186,7 +1187,7 @@ public class stepDefinitions extends BaseClass {
          String tin="";
          if(category.equals("Individual")){
              tin = sharedatastep.Individual_tin;
-            // tin = "1000066002";
+             tin = "1000069834";
          }else if(category.equals("Organisation")){
              tin = sharedatastep.Organization_tin;
              //tin = "1000058603";
@@ -1205,8 +1206,8 @@ public class stepDefinitions extends BaseClass {
 
     @Then("Enter liability")
     public void enterLiability() throws InterruptedException {
-         Thread.sleep(5000);
-         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("ReturnsLodgement:id_Liability_input"))).sendKeys("100,000");
+         Thread.sleep(7000);
+         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("ReturnsLodgement:id_Liability_input"))).sendKeys("9000");
     }
 
     @Then("Submit lodge return application")
@@ -1235,7 +1236,7 @@ public class stepDefinitions extends BaseClass {
         String tin="";
         if(category.equals("Individual")){
             tin = sharedatastep.Individual_tin;
-            //tin = "1000066002";
+            tin = "1000069834";
         }else if(category.equals("Organisation")){
             tin = sharedatastep.Organization_tin;
             //tin = "1000058603";
