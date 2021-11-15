@@ -1,6 +1,6 @@
 Feature: Submit Registration Application Individual
 
-  @ind @ind-reg-only @ind-reg-taxtypes @sanity
+  @ind @ind-reg-only @ind-reg-taxtypes
   Scenario: To verify the process of Registering an individual successfully
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -22,7 +22,7 @@ Feature: Submit Registration Application Individual
     Then Fill in Local postal address details for Individual
     Then Enter email primary contact for individual as "margiewambui11@gmail.com"
     Then Upload attachment "Passport" for Individual with file "id_doc.png"
-#    Then Verify success message "Record Added"
+    Then Verify success message "Record Added"
     Then Submit Individual registration application
     Then Verify success message "Processing Completed - Reference Number"
     Then Obtain reference number for ind registration "Processing Completed - Reference Number - ARN"

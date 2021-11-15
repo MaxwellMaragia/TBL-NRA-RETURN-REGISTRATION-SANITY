@@ -29,3 +29,4 @@ Feature: Register Tax Type Organization - Register Tax Type
     Examples:
       | TaxType            |
       | Company Income Tax |
+      | Excise Tax         |
