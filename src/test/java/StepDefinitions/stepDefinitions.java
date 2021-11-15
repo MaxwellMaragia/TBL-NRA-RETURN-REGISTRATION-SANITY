@@ -1286,6 +1286,7 @@ public class stepDefinitions extends BaseClass {
             driver.switchTo().defaultContent();
             Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -1395,8 +1396,9 @@ public class stepDefinitions extends BaseClass {
 
             Thread.sleep(6000);
             driver.findElement(By.xpath("//a[contains(text(),'PERSONAL DETAILS')]")).click();
-
+            Thread.sleep(1000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:pitShowTab:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarantPosition")).sendKeys("Doctor");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
             //jse.executeScript("FlexibleFormEntity:pitShowTab:declarationDate_input').setAttribute('value', '01/01/2018')");
@@ -1426,6 +1428,7 @@ public class stepDefinitions extends BaseClass {
             switchToDefault();
             Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
         }
@@ -1520,7 +1523,9 @@ public class stepDefinitions extends BaseClass {
             driver.findElement(By.id("FlexbleFormAttachment:Ok")).click();
             driver.switchTo().defaultContent();
 
+            Thread.sleep(4000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:CITDetailsTab:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarantPosition")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarationDate_input")).sendKeys("01/01/2018");
         }
