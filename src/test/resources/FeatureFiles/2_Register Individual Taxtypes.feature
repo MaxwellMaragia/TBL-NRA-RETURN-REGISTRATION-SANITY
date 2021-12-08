@@ -26,10 +26,10 @@ Feature: Register Tax Type Individual - Register Tax Type
     Examples:
       | TaxType                |
       | Pay As You Earn        |
-#      | Personal Income Tax    |
-#      | Goods and Services Tax |
-#      | Capital Gains Tax      |
-#      | Foreign Travel Tax     |
-#      | Payroll Tax            |
-#      | Rental Income Tax      |
-#      | Withholding Tax        |
+      | Personal Income Tax    |
+      | Goods and Services Tax |
+      | Capital Gains Tax      |
+      | Foreign Travel Tax     |
+      | Payroll Tax            |
+      | Rental Income Tax      |
+      | Withholding Tax        |

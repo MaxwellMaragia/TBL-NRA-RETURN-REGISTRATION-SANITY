@@ -1142,8 +1142,11 @@ public class stepDefinitions extends BaseClass {
         Thread.sleep(1500);
         actions.sendKeys(Keys.TAB);
         Thread.sleep(1500);
-        driver.findElement(By.id("RevenueTypeDetails:TaxableTurnover_input")).sendKeys("12,000");
-        Thread.sleep(900);
+        if(!taxtype.equals("Capital Gains Tax")){
+            driver.findElement(By.id("RevenueTypeDetails:TaxableTurnover_input")).sendKeys("12,000");
+            Thread.sleep(900);
+        }
+
         driver.findElement(By.id("RevenueTypeDetails:okButton")).click();
         switchToDefault();
 
@@ -1206,7 +1209,7 @@ public class stepDefinitions extends BaseClass {
 
     @Then("Enter liability")
     public void enterLiability() throws InterruptedException {
-         Thread.sleep(7000);
+         Thread.sleep(5000);
          twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("ReturnsLodgement:id_Liability_input"))).sendKeys("9000");
     }
 
