@@ -68,6 +68,7 @@ public class stepDefinitions extends BaseClass {
     public WebDriverWait onehundred;
     public WebDriverWait twohundred;
     public WebDriverWait threehundred;
+    public JavascriptExecutor jse;
     public Actions actions;
 
 
@@ -87,6 +88,7 @@ public class stepDefinitions extends BaseClass {
         Pro.load(fls);
         driver = BaseClass.getDriver();
         actions = new Actions(driver);
+        jse = (JavascriptExecutor)driver;
         five = new WebDriverWait(driver, Duration.ofSeconds(5));
         ten = new WebDriverWait(driver, Duration.ofSeconds(10));
         fifteen = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -1290,6 +1292,7 @@ public class stepDefinitions extends BaseClass {
             driver.switchTo().defaultContent();
             Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -1399,8 +1402,9 @@ public class stepDefinitions extends BaseClass {
 
             Thread.sleep(6000);
             driver.findElement(By.xpath("//a[contains(text(),'PERSONAL DETAILS')]")).click();
-
+            Thread.sleep(1000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:pitShowTab:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:pitShowTab:declarantPosition")).sendKeys("Doctor");
 //            JavascriptExecutor jse = (JavascriptExecutor) driver;
             //jse.executeScript("FlexibleFormEntity:pitShowTab:declarationDate_input').setAttribute('value', '01/01/2018')");
@@ -1430,6 +1434,7 @@ public class stepDefinitions extends BaseClass {
             switchToDefault();
             Thread.sleep(3000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:declarantDesignation")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:declarationDate_input")).sendKeys("01/01/2018");
         }
@@ -1524,7 +1529,9 @@ public class stepDefinitions extends BaseClass {
             driver.findElement(By.id("FlexbleFormAttachment:Ok")).click();
             driver.switchTo().defaultContent();
 
+            Thread.sleep(4000);
             twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("FlexibleFormEntity:CITDetailsTab:declarantName"))).sendKeys("DR Margie Wambui");
+            Thread.sleep(1000);
             driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarantPosition")).sendKeys("Doctor");
             //driver.findElement(By.id("FlexibleFormEntity:CITDetailsTab:declarationDate_input")).sendKeys("01/01/2018");
         }
@@ -1770,6 +1777,120 @@ public class stepDefinitions extends BaseClass {
         //Tax return has successfully saved.The status is now pending cancellation. CGTR/000002235/2021
 
         System.out.println("Actual ARN to be used in CRM is " +sharedatastep.Reference_number);
+    }
+
+    @Then("Fill in sole proprietor additional details")
+    public void fillInSoleProprietorAdditionalDetails() throws InterruptedException {
+        ten.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(., 'Sole Proprietor Additional Details')]"))).click();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:individualAccordion:tradingNameTableHandler:AddTradingNameDetails"))).click();
+        switchToFrameBackoffice();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("TradingNameDetails:TradingName"))).sendKeys("Codei "+getRandom(5));
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"TradingNameDetails:PrimaryTradingName\"]/div[2]/span")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("TradingNameDetails:EffectiveDate_input")).sendKeys(daysFromToday(2));
+        Thread.sleep(2000);
+        actions.sendKeys(Keys.TAB).perform();
+        Thread.sleep(1000);
+        driver.findElement(By.id("TradingNameDetails:AddTradingAddress")).click();
+        driver.switchTo().defaultContent();
+        Thread.sleep(4500);
+        driver.switchTo().frame(1);
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AddressDetails:AddressType\"]/div[3]"))).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Local Postal Address')]")).click();
+
+        //wait for postal address details to load
+        WebElement region = twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AddressDetails:PostalRegion\"]/div[3]")));
+        region.isDisplayed();
+        //end wait
+
+        driver.findElement(By.id("AddressDetails:City")).sendKeys("Kenema");
+        region.click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'East')]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//*[@id=\"AddressDetails:District1\"]/div[3]")).click();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Kenema')]"))).click();
+
+        driver.findElement(By.id("AddressDetails:addOk")).click();
+        Thread.sleep(5000);
+        driver.switchTo().defaultContent();
+        switchToFrameBackoffice();
+        Thread.sleep(3000);
+        driver.findElement(By.id("TradingNameDetails:SourceOfCapitalInv")).sendKeys("Loan");
+        Thread.sleep(1000);
+        driver.findElement(By.id("TradingNameDetails:ExistBusinessCapital_input")).sendKeys("100000");
+        Thread.sleep(1000);
+        driver.findElement(By.id("TradingNameDetails:TotCapitalInvst_input")).sendKeys("5000");
+        Thread.sleep(1000);
+        driver.findElement(By.id("TradingNameDetails:NatureOfBusiness")).sendKeys("Software development");
+        Thread.sleep(500);
+        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"TradingNameDetails:AccountYearEndDateDD\"]/div[3]"))).click();
+        Thread.sleep(2000);
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        // driver.findElement(By.xpath("//li[contains(text(),'February')]")).click();
+        Thread.sleep(2000);
+        fourty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"TradingNameDetails:AccountYearEndDateMM\"]/div[3]"))).click();
+        Thread.sleep(1000);
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//        driver.findElement(By.xpath("//li[contains(text(),'02')]")).click();
+        Thread.sleep(1000);
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+        driver.findElement(By.id("TradingNameDetails:OK")).click();
+        switchToDefault();
+        Thread.sleep(4000);
+
+    }
+
+    @Then("Enter property details")
+    public void enterPropertyDetails() throws InterruptedException {
+        Thread.sleep(3000);
+        ten.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(., 'Property Details')]"))).click();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:individualAccordion:propertyTableHandler:AddProperty"))).click();
+        switchToFrameBackoffice();
+        thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PropertyDetails:PropertyType\"]/div[3]"))).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//li[contains(text(),'Cafeteria')]")).click();
+        Thread.sleep(1000);
+        thirty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PropertyDetails:Ownership\"]/div[3]"))).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//li[contains(text(),'Owned')]")).click();
+        Thread.sleep(4000);
+
+        driver.findElement(By.id("PropertyDetails:TradersPremises")).sendKeys(getRandom(5)+", "+getRandom(5));
+        Thread.sleep(1500);
+        driver.findElement(By.id("PropertyDetails:AddPropertyAddress")).click();
+
+        driver.switchTo().defaultContent();
+        Thread.sleep(4500);
+        driver.switchTo().frame(1);
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AddressDetails:AddressType\"]/div[3]"))).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Local Postal Address')]")).click();
+
+        //wait for postal address details to load
+        WebElement region = twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AddressDetails:PostalRegion\"]/div[3]")));
+        region.isDisplayed();
+        //end wait
+
+        driver.findElement(By.id("AddressDetails:City")).sendKeys("Kenema");
+        region.click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'East')]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//*[@id=\"AddressDetails:District1\"]/div[3]")).click();
+        twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Kenema')]"))).click();
+
+        driver.findElement(By.id("AddressDetails:addOk")).click();
+        Thread.sleep(5000);
+        driver.switchTo().defaultContent();
+        switchToFrameBackoffice();
+        Thread.sleep(2000);
+        WebElement ok = twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("PropertyDetails:Ok")));
+        jse.executeScript("arguments[0].click()", ok);
+        switchToDefault();
     }
 }
 

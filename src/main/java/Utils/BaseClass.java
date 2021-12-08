@@ -34,6 +34,14 @@ public class BaseClass {
         return driver;
 
 	}
+
+	public static String daysFromToday(int i){
+		LocalDate today = LocalDate.now();
+		LocalDate tomorrow = today.plus(i, ChronoUnit.DAYS);
+		String formattedDate = tomorrow.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		return formattedDate;
+	}
+
 	public static String randomDate() {
 	        
 	        LocalDate from = LocalDate.of(2000, 1, 1);
