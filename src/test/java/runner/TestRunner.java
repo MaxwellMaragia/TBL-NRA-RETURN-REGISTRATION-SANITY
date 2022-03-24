@@ -22,7 +22,6 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src\\test\\resources\\FeatureFiles",
 		glue = "StepDefinitions" ,
-
 		tags = "@sanity",
 		dryRun = false,    //checks whether each feature has a mapped step definition
 		monochrome = true,// neat output after tc run

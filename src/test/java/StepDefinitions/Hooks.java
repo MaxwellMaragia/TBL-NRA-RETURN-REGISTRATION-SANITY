@@ -35,7 +35,9 @@ public class Hooks extends BaseClass {
 	}
 
 	@After(order=2)
-	public void AftersaveScreenshot(Scenario scenario)  {
+	public void AftersaveScreenshot(Scenario scenario) {
+
+		File destPath;
 
 
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy_hh.mm.ss");
@@ -44,6 +46,7 @@ public class Hooks extends BaseClass {
 
 		if(scenario.isFailed())
 		{
+
 			path = "./test-output/Screenshots/Failed/"+scenario.getName()+".png";
 			destPath=new File(path);
 			sharedatastep.failed++;
@@ -52,11 +55,12 @@ public class Hooks extends BaseClass {
 			path = "./test-output/Screenshots/Passed/"+scenario.getName()+".png";
 			destPath=new File(path);
 			sharedatastep.passed++;
+			destPath=new File("./test-output/Screenshots/Failed/" + scenario.getName()+ strDate + ".png");
+
 		}
 
 		try {
 			FileUtils.copyFile(screenshot_with_scenario_name,destPath);
-
 		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}

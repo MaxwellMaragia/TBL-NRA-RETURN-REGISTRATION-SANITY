@@ -12,9 +12,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual
     Then Verify success message "Returns Lodgement is Successful with Reference Number"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-#      | Individual   | GST Return         | 2020 | 1      |
+      | Individual   | PAYE Returns       | 2022 | 1      |
+      | Individual   | PIT Return (Final) | 2022 | 1      |
+#      | Individual   | GST Return         | 2022 | 1      |
     
   @ind  @sanity @file @returns @returns-ind
   Scenario Outline: Verify the process of Submit Tax Return for <taxtype>
@@ -28,9 +28,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual
     Then Verify success message "Record successfully saved with reference number"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-#      | Individual   | GST Return         | 2020 | 1      |
+      | Individual   | PAYE Returns       | 2022 | 1      |
+      | Individual   | PIT Return (Final) | 2022 | 1      |
+#      | Individual   | GST Return         | 2022 | 1      |
      
   @ind  @sanity @adjust @returns @returns-ind
   Scenario Outline: Verify the process of Adjust Tax Return for <taxtype>
@@ -56,9 +56,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-#      | Individual   | GST Return         | 2020 | 1      |
+      | Individual   | PAYE Returns       | 2022 | 1      |
+      | Individual   | PIT Return (Final) | 2022 | 1      |
+#      | Individual   | GST Return         | 2022 | 1      |
 
   @ind  @sanity @cancel @returns-ind
   Scenario Outline: Verify the process of Cancel Tax Return for <taxtype>
@@ -85,6 +85,6 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Individual
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Individual   | PAYE Returns       | 2020 | 1      |
-      | Individual   | PIT Return (Final) | 2020 | 1      |
-#      | Individual   | GST Return         | 2020 | 1      |
+      | Individual   | PAYE Returns       | 2022 | 1      |
+      | Individual   | PIT Return (Final) | 2022 | 1      |
+#      | Individual   | GST Return         | 2022 | 1      |
