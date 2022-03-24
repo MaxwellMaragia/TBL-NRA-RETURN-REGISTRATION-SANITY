@@ -12,9 +12,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Organization
     Then Verify success message "Returns Lodgement is Successful with Reference Number"
     Examples:
       | category     | taxtype            | year | number |
-      | Organisation | CIT Return (Final) | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2021 | 1      |
 
-  @org @sanity @file @returns
+  @org @sanity @file @returns @org-returns
   Scenario Outline: Verify the process of Submit Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -26,9 +26,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Organization
     Then Verify success message "Record successfully saved with reference number"
     Examples:
       | category     | taxtype            | year | number |
-      | Organisation | CIT Return (Final) | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2021 | 1      |
 
-  @org @sanity @adjust @returns
+  @org @sanity @adjust @returns @org-returns
   Scenario Outline: Verify the process of Adjust Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -52,9 +52,9 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Organization
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Organisation | CIT Return (Final) | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2021 | 1      |
 
-  @org @sanity @cancel @returns
+  @org @sanity @cancel @returns @org-returns
   Scenario Outline: Verify the process of Cancel Tax Return for <taxtype>
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login
@@ -79,4 +79,4 @@ Feature: Lodge-File-Adjust-Cancel Tax Returns for Organization
     And Verify approval "Approved"
     Examples:
       | category     | taxtype            | year | number |
-      | Organisation | CIT Return (Final) | 2020 | 1      |
+      | Organisation | CIT Return (Final) | 2021 | 1      |

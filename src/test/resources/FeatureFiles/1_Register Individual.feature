@@ -1,6 +1,6 @@
 Feature: Submit Registration Application Individual
 
-  @ind @ind-reg-only @ind-reg-taxtypes @sanity
+  @ind @ind-reg-only @ind-reg-taxtypes @sanity @registration
   Scenario: To verify the process of Registering an individual successfully
     Given User navigates to the login page
     When Enters the username "tripsuser" and password "Passw0rd" to login

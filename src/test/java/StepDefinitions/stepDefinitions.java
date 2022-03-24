@@ -678,7 +678,7 @@ public class stepDefinitions extends BaseClass {
     }
 
     @Then("Upload attachment {string} for Individual with file {string}")
-    public void uploadAttachmentForIndividual(String attachment, String file) {
+    public void uploadAttachmentForIndividual(String attachment, String file) throws InterruptedException {
         ten.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(., 'Attachments')]"))).click();
 
         ten.until(ExpectedConditions.visibilityOfElementLocated(By.id("RegisterIndividual:individualAccordion:attachmentTableHandler:AddAttachment"))).click();
@@ -687,10 +687,12 @@ public class stepDefinitions extends BaseClass {
 
         twenty.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AttachmentDetails:DocType\"]/div[3]"))).click();
         driver.findElement(By.xpath("//li[text()='" + attachment + "']")).click();
+        Thread.sleep(1500);
 
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         driver.findElement(By.id("AttachmentDetails:Reference")).sendKeys(String.valueOf(timestamp.getTime()));
 
+        Thread.sleep(1500);
         String path = System.getProperty("user.dir") + File.separator + "src\\test\\resources\\" + File.separator + file;
         driver.findElement(By.id("AttachmentDetails:AttachmentPath_input")).sendKeys(path);
 
@@ -1194,8 +1196,8 @@ public class stepDefinitions extends BaseClass {
              tin = sharedatastep.Individual_tin;
              tin = "1000069834";
          }else if(category.equals("Organisation")){
-             tin = sharedatastep.Organization_tin;
-             //tin = "1000058603";
+             //tin = sharedatastep.Organization_tin;
+             tin = "1000072673";
          }
 
          thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:TIN"))).sendKeys(tin);
@@ -1243,8 +1245,8 @@ public class stepDefinitions extends BaseClass {
             tin = sharedatastep.Individual_tin;
             tin = "1000069834";
         }else if(category.equals("Organisation")){
-            tin = sharedatastep.Organization_tin;
-            //tin = "1000058603";
+            //tin = sharedatastep.Organization_tin;
+            tin = "1000072673";
         }
 
         thirty.until(ExpectedConditions.visibilityOfElementLocated(By.id("SearchForm:tin"))).sendKeys(tin);
