@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -11,7 +14,14 @@ import java.time.temporal.ChronoUnit;
 import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Stream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.MultiPartEmail;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -86,5 +96,58 @@ public class BaseClass {
 		}
 		// return the resultant string
 		return r.toString();
+	}
+
+	public static void sendMail(String subject, String message, String path) throws EmailException {
+		// Create the attachment
+		EmailAttachment attachment = new EmailAttachment();
+		attachment.setPath(path);
+		attachment.setDisposition(EmailAttachment.ATTACHMENT);
+		attachment.setDescription("REPORT");
+		attachment.setName("Report.zip");
+
+		MultiPartEmail email = new MultiPartEmail();
+		email.setHostName("smtp.googlemail.com");
+		email.setSmtpPort(465);
+		email.setAuthenticator(new DefaultAuthenticator("maxmaragia@gmail.com", "maxipain11"));
+		email.setSSLOnConnect(true);
+		email.setFrom("maxmaragia@gmail.com");
+		email.setSubject(subject);
+		email.setMsg(message);
+		email.addTo("sandeep.madavi@technobraingroup.com");
+		email.addTo("maxwell.maragia@technobraingroup.com");
+		email.addTo("sowjanya.jalem@technobraingroup.com");
+		email.addTo("vinay.mudugal@technobraingroup.com");
+		email.attach(attachment);
+		email.send();
+	}
+
+	public static void zip( String srcPath,  String zipFilePath) throws IOException {
+		Path zipFileCheck = Paths.get(zipFilePath);
+		if(Files.exists(zipFileCheck)) { // Attention here it is deleting the old file, if it already exists
+			Files.delete(zipFileCheck);
+			System.out.println("Deleted");
+		}
+		Path zipFile = Files.createFile(Paths.get(zipFilePath));
+
+		Path sourceDirPath = Paths.get(srcPath);
+		try (ZipOutputStream zipOutputStream = new ZipOutputStream(Files.newOutputStream(zipFile));
+			 Stream<Path> paths = Files.walk(sourceDirPath)) {
+			paths
+					.filter(path -> !Files.isDirectory(path))
+					.forEach(path -> {
+						ZipEntry zipEntry = new ZipEntry(sourceDirPath.relativize(path).toString());
+						try {
+							zipOutputStream.putNextEntry(zipEntry);
+
+							Files.copy(path, zipOutputStream);
+							zipOutputStream.closeEntry();
+						} catch (IOException e) {
+							System.err.println(e);
+						}
+					});
+		}
+
+		System.out.println("Zip is created at : "+zipFile);
 	}
 }

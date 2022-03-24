@@ -1887,7 +1887,10 @@ public class stepDefinitions extends BaseClass {
         Thread.sleep(5000);
         driver.switchTo().defaultContent();
         switchToFrameBackoffice();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
+        driver.findElement(By.id("PropertyDetails:DateOfAquisition_input")).sendKeys("01/09/2020");
+        Thread.sleep(300);
+        actions.sendKeys(Keys.TAB).perform();
         WebElement ok = twenty.until(ExpectedConditions.visibilityOfElementLocated(By.id("PropertyDetails:Ok")));
         jse.executeScript("arguments[0].click()", ok);
         switchToDefault();
